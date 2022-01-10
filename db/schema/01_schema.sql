@@ -2,17 +2,17 @@
 
 -- CREATE DATABASE template1
 --     WITH
---     OWNER = sm
+--     OWNER = labber
 --     ENCODING = 'UTF8'
 --     CONNECTION LIMIT = -1;
 
 -- \c template1;
 
-DROP DATABASE [IF EXISTS] food_id;
+DROP DATABASE [IF EXISTS] food;
 
 CREATE DATABASE food
     WITH
-    OWNER = sm
+    OWNER = labber
     ENCODING = 'UTF8'
     CONNECTION LIMIT = -1;
 
@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS customers CASCADE;
 DROP TABLE IF EXISTS categories CASCADE;
 DROP TABLE IF EXISTS foods CASCADE;
 DROP TABLE IF EXISTS orders CASCADE;
-DROP TABLE IF EXISTS order_foods CASCADE;
+DROP TABLE IF EXISTS order_details CASCADE;
 DROP TABLE IF EXISTS orders CASCADE;
 DROP TABLE IF EXISTS widgets CASCADE;
 
@@ -79,18 +79,13 @@ CREATE TABLE orders (
   special_instructions TEXT
 );
 
-DROP TABLE IF EXISTS menu CASCADE;
-CREATE TABLE menu (
-  id SERIAL PRIMARY KEY NOT NULL,
-  food_id INTEGER NOT NULL REFERENCES foods(id) ON DELETE CASCADE,
-  category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE
-);
 
-CREATE TABLE order_foods (
+CREATE TABLE order_details (
   id SERIAL PRIMARY KEY NOT NULL,
   order_id INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
   food_id INTEGER NOT NULL REFERENCES foods(id) ON DELETE CASCADE,
-  quantity INTEGER NOT NULL
+  no_of_serving int(4) NOT NULL,
+  total_amount float NOT NULL,
 );
 
 
@@ -101,3 +96,4 @@ CREATE TABLE widgets (
   user_id INTEGER REFERENCES users(id),
   name VARCHAR(255) NOT NULL
 );
+
