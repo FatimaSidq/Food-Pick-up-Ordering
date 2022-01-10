@@ -42,32 +42,27 @@ window.onload = function () {
   );
   addMenuItem(
     "assets/menu/coffee.png",
-    "Coffee",
+    "Signature Brewed Coffee",
     "Freshly brewed Arabica bean coffee",
     "$2"
   );
-  addMenuItem(
-    "assets/menu/green_tea.png",
-    "Green Tea",
-    "",
-    "$2"
-  );
+  addMenuItem("assets/menu/green_tea.png", "Green Tea", "", "$2");
   addMenuItem(
     "assets/menu/mixed_veg_salad.png",
     "Mixed Veg Salad",
     "Corn, Cherry tomatoes, Chickpeas, Onions, Radishes, Coconut Bacon on a bed of Romaine lettuce topped with avocados",
-    "$10")
-    addMenuItem(
-      "assets/menu/veggie_breakfast_burritos.png",
-      "Veggie Breakfast Burritos",
-      "Kidney beans, Sweet potatoes, avocados and beets wrapped in a tortilla",
-      "$12"
-    );
-    addMenuItem(
-      "assets/menu/veggie_wraps.png",
-      "Veggie Wraps",
-      "A colourful Veggie Wrap packed with Veggies of your choice wrapped in lettuce",
-      "$8"
-    );
-    
+    "$10"
+  );
+  addMenuItem(
+    "assets/menu/veggie_breakfast_burritos.png",
+    "Veggie Breakfast Burritos",
+    "Kidney beans, Sweet potatoes, avocados and beets wrapped in a tortilla",
+    "$12"
+  );
+  addMenuItem(
+    "assets/menu/veggie_wraps.png",
+    "Veggie Wraps",
+    "A colourful Veggie Wrap packed with Veggies of your choice wrapped in lettuce",
+    "$8"
+  );
 };
