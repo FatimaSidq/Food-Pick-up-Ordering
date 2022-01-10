@@ -17,7 +17,11 @@ header {
   justify-content: space-around;
 }
 
-a {
+.links > a {
   color: unset;
   text-decoration: unset;
+}
+
+.logo {
+  height: 45px;
 }
