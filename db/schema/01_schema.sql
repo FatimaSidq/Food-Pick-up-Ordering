@@ -79,6 +79,12 @@ CREATE TABLE orders (
   special_instructions TEXT
 );
 
+DROP TABLE IF EXISTS menu CASCADE;
+CREATE TABLE menu (
+  id SERIAL PRIMARY KEY NOT NULL,
+  food_id INTEGER NOT NULL REFERENCES foods(id) ON DELETE CASCADE,
+  category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE
+);
 
 CREATE TABLE order_foods (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -95,4 +101,3 @@ CREATE TABLE widgets (
   user_id INTEGER REFERENCES users(id),
   name VARCHAR(255) NOT NULL
 );
-
