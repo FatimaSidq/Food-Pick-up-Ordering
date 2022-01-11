@@ -57,12 +57,9 @@ app.get("/menu", (req, res) => {
   res.render("menu");
 });
 
-app.get("/register", (_req, res) => {
-  res.render("register");
-});
-
-app.get("/login", (_req, res) => {
-  res.render("login");
+app.get("/login/:id", (req, res) => {
+  res.cookie("id", req.params.id);
+  res.redirect("/menu");
 });
 
 app.listen(PORT, () => {
