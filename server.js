@@ -35,13 +35,11 @@ app.use(express.static("public"));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
+const menuRoutes = require("./routes/menu");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
-app.use("/api/users", usersRoutes(db));
-app.use("/api/widgets", widgetsRoutes(db));
+// app.use(menuRoutes); // TODO fix this :(
 // Note: mount other resources here, using the same pattern above
 
 // Home page
@@ -50,6 +48,18 @@ app.use("/api/widgets", widgetsRoutes(db));
 
 app.get("/", (req, res) => {
   res.render("index");
+});
+
+app.get("/menu", (req, res) => {
+  res.render("menu");
+});
+
+app.get("/register", (_req, res) => {
+  res.render("register");
+});
+
+app.get("/login", (_req, res) => {
+  res.render("login");
 });
 
 app.listen(PORT, () => {

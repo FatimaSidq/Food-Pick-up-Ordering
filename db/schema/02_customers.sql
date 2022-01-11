@@ -2,7 +2,13 @@ DROP TABLE IF EXISTS customers CASCADE;
 
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
+<<<<<<< HEAD
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
   -- name VARCHAR(255) NOT NULL,
   -- phone VARCHAR(20) NOT NULL
+=======
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  name VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL
+>>>>>>> 940ca850c65ff644b0d05e9c749d6567bbd7eec0
 );
