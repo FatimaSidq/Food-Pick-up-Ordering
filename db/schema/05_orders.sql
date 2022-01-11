@@ -6,8 +6,8 @@ CREATE TABLE orders (
   when_completed TIMESTAMP DEFAULT now(),
   when_pickedUp TIMESTAMP DEFAULT now(),
   -- amount INTEGER NOT NULL, -- is the total amount in order_details
+  is_ready BOOLEAN DEFAULT false,
   is_paid BOOLEAN DEFAULT false,
   is_picked_up BOOLEAN DEFAULT false,
-  is_ready BOOLEAN DEFAULT false,
   special_instructions TEXT
 );
