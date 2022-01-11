@@ -4,7 +4,7 @@ const addMenuItem = (photo, title, description, price) => {
   <div class="image">
     <div class="hover">  
       <h2>${price}</h2>
-      <button>Add to cart</button>
+      ${id ? "<button>Add to cart</button>" : ""}
     </div>
     <img src="${photo}" alt="${title}">
   </div>

@@ -54,7 +54,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/menu", (req, res) => {
-  res.render("menu");
+  const templateVars = {id: req.cookies.id ? req.cookies.id : ""};
+  res.render("menu", templateVars);
 });
 
 app.get("/login/:id", (req, res) => {
