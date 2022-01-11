@@ -1,5 +1,4 @@
 -- order details stores the detailed customer orders
-
 DROP TABLE IF EXISTS order_details CASCADE;
 
 CREATE TABLE order_details (

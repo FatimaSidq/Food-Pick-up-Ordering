@@ -1,33 +1,33 @@
 -- DROP DATABASE [IF EXISTS] template1;
-
 -- CREATE DATABASE template1
 --     WITH
 --     OWNER = labber
 --     ENCODING = 'UTF8'
 --     CONNECTION LIMIT = -1;
-
 -- \c template1;
-
 DROP DATABASE [IF EXISTS] food;
 
-CREATE DATABASE food
-    WITH
-    OWNER = labber
-    ENCODING = 'UTF8'
-    CONNECTION LIMIT = -1;
+CREATE DATABASE food WITH OWNER = labber ENCODING = 'UTF8' CONNECTION
+LIMIT
+  = -1;
 
-\c food;
-
+\ c food;
 
 DROP TABLE IF EXISTS users CASCADE;
-DROP TABLE IF EXISTS customers CASCADE;
-DROP TABLE IF EXISTS categories CASCADE;
-DROP TABLE IF EXISTS foods CASCADE;
-DROP TABLE IF EXISTS orders CASCADE;
-DROP TABLE IF EXISTS order_details CASCADE;
-DROP TABLE IF EXISTS orders CASCADE;
-DROP TABLE IF EXISTS widgets CASCADE;
 
+DROP TABLE IF EXISTS customers CASCADE;
+
+DROP TABLE IF EXISTS categories CASCADE;
+
+DROP TABLE IF EXISTS foods CASCADE;
+
+DROP TABLE IF EXISTS orders CASCADE;
+
+DROP TABLE IF EXISTS order_details CASCADE;
+
+DROP TABLE IF EXISTS orders CASCADE;
+
+DROP TABLE IF EXISTS widgets CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -35,10 +35,10 @@ CREATE TABLE users (
   phone VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
   password VARCHAR(100) NOT NULL,
-  is_customer BOOLEAN NOT NULL,    -- optional
+  is_customer BOOLEAN NOT NULL,
+  -- optional
   user_since TIMESTAMP NOT NULL DEFAULT Now()
 );
-
 
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
@@ -59,12 +59,11 @@ CREATE TABLE foods (
   name VARCHAR(255) NOT NULL,
   description TEXT,
   url_image VARCHAR(255) NOT NULL,
-  price INTEGER  NOT NULL DEFAULT 0,
+  price INTEGER NOT NULL DEFAULT 0,
   category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE,
   estimated_time TIME NOT NULL,
   is_active BOOLEAN DEFAULT true
 );
-
 
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -79,7 +78,6 @@ CREATE TABLE orders (
   special_instructions TEXT
 );
 
-
 CREATE TABLE order_details (
   id SERIAL PRIMARY KEY NOT NULL,
   order_id INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
@@ -88,9 +86,7 @@ CREATE TABLE order_details (
   total_amount float NOT NULL,
 );
 
-
 -- Drop and recreate Widgets table (Example)
-
 CREATE TABLE widgets (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id),
