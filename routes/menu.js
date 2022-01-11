@@ -9,17 +9,9 @@ const express = require('express');
 const router  = express.Router();
 
 module.exports = (db) => {
-  router.get("/menu", (req, res) => {
-    // db.query(`SELECT * FROM users;`)
-    //   .then(data => {
-    //     const users = data.rows;
-    //     res.json({ users });
-    //   })
-    //   .catch(err => {
-    //     res
-    //       .status(500)
-    //       .json({ error: err.message });
-    //   });
+  router.get("/", (req, res) => {
+    const templateVars = {id: req.cookies.id ? req.cookies.id : ""};
+    res.render("menu", templateVars);
   });
   return router;
 };
