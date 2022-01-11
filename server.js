@@ -58,6 +58,4 @@ app.get("/login/:id", (req, res) => {
   res.redirect("/menu");
 });
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
-});
+app.listen(PORT);
