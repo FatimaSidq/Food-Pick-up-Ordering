@@ -2,7 +2,7 @@ const addMenuItem = (photo, title, description, price) => {
   $("#menu").append(`
 <div class="item">
   <div class="image">
-    <div class="hover">  
+    <div class="hover">
       <h2>${price}</h2>
       <button>Add to cart</button>
     </div>
@@ -46,7 +46,7 @@ window.onload = function () {
     "Freshly brewed Arabica bean coffee",
     "$2"
   );
-  addMenuItem("assets/menu/green_tea.png", "Green Tea", "", "$2");
+  addMenuItem("assets/menu/green_tea.png", "Green Tea", "Aromatic Green Tea made from fresh herbs", "$2");
   addMenuItem(
     "assets/menu/mixed_veg_salad.png",
     "Mixed Veg Salad",
