@@ -122,7 +122,7 @@ VALUES
   ),
   (
     'Green Tea',
-    '',
+    'Made from the Camellia sinensis plant. Our Green tea is prepared by steaming and pan-frying the Camellia sinensis leaves and then drying them.',
     'assets/menu/green_tea.png',
     2,
     4,
