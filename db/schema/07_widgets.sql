@@ -1,4 +1,5 @@
--- Drop and recreate Widgets table (Example)
+-- Drop and recreate Widgets table
+
 DROP TABLE IF EXISTS widgets CASCADE;
 
 CREATE TABLE widgets (

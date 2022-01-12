@@ -1,19 +1,9 @@
-INSERT INTO
-  categories (name, description, is_active)
+-- categories table seeds here
+INSERT INTO categories (name, description, is_active)
 VALUES
-  (
-    'Wraps and Sandwiches',
-    'Hot and cold sandwiches and wraps',
-    true
-  ),
-  ('Salads', 'For a healthier option', true),
-  (
-    'Pastries and Desserts',
-    'Treats that you will love to indulge',
-    true
-  ),
-  (
-    'Beverages',
-    'Hot and cold beverages for everyone''s delight',
-    true
-  );
+('wraps-sandwiches', 'Hot and cold sandwiches and wraps', true),
+('salads', 'For healthier option', true),
+('pastries-desserts', 'Treats you will love to indulge', true),
+('soups', 'Comfort yourself with hot soups made with fresh, organic ingredients', true),
+('beverages', 'Hot and cold beverages for everyones delight', true);
+

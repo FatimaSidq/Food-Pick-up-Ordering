@@ -8,3 +8,4 @@ CREATE TABLE order_details (
   no_of_serving INTEGER NOT NULL,
   total_amount INTEGER NOT NULL -- no_of_serving * foods.price of the foods.id
 );
+
