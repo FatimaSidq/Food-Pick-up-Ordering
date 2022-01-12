@@ -42,7 +42,7 @@ const menuRoutes = require("./routes/menu");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
-// app.use(menuRoutes); // TODO fix this :(
+app.use("/menu", menuRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 // Home page
@@ -53,16 +53,9 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/menu", (req, res) => {
-  const templateVars = {id: req.cookies.id ? req.cookies.id : ""};
-  res.render("menu", templateVars);
-});
-
 app.get("/login/:id", (req, res) => {
   res.cookie("id", req.params.id);
   res.redirect("/menu");
 });
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
-});
+app.listen(PORT);

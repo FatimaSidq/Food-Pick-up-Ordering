@@ -2,13 +2,37 @@
 -- foods table seeds - wraps and burritos
 INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
 VALUES
-('Veggie Wrap', 'A colourful Veggie Wrap packed with fresh organic veggies of your choice wrapped in lettuce.', 'https://33mdrtv3gz5308bn82jcilk1-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/goddess-wrap-768x768.jpg', 8, 1, 10, true),
-('Vegan breakfast burritos','Kidney beans, Sweet potatoes, avocados and beets wrapped in a tortilla','https://cdn2.veganosity.com/wp-content/uploads/2014/06/2014-06-21-001-2014-06-21-015.jpg', 8, 1, 10, true);
+  (
+    'Veggie Wrap',
+    'A colourful Veggie Wrap packed with fresh organic veggies of your choice wrapped in lettuce.',
+    'assets/menu/veggie_wraps.png',
+    8,
+    1,
+    10,
+    true
+  ),
+  (
+    'Vegan breakfast burritos',
+    'Kidney beans, Sweet potatoes, avocados and beets wrapped in a tortilla',
+    'assets/menu/veggie_breakfast_burritos.png',
+    8,
+    1,
+    10,
+    true
+  );
 
 -- foods table seeds - salad
 INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
 VALUES
-('Mixed Veg Salad','Cold salad of mixed raw veggies in marinate.','http://www.blimpygirl.com/bgmain/wp-content/uploads/2013/07/IMG_4467.jpg', 8, 2, 15, true);
+  (
+    'Mixed Veg Salad',
+    'Corn, Cherry tomatoes, Chickpeas, Onions, Radishes, Coconut Bacon on a bed of Romaine lettuce topped with avocados',
+    'assets/menu/mixed_veg_salad.png',
+    8,
+    2,
+    10,
+    true
+  );
 
 -- foods table seeds - pastries-desserts
 INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
