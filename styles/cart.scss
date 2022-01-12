@@ -27,14 +27,21 @@ body {
 
     .item {
         text-align: left;
-        padding-bottom: 50px;
+        margin-bottom: 50px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
 
+        @media (max-width: 539px) {
+            .image {
+                width: 310px !important;
+                margin-bottom: 20px;
+            }
+        }
+
         .image {
             border: 2px solid black;
-            width: 300px;
+            width: 230px;
             height: 150px;
             overflow: hidden;
             position: relative;
@@ -51,8 +58,23 @@ body {
         }
 
         .info {
-            width: 300px;
-            // padding-left: 25px;
+            margin-top: -19px;
+            width: 310px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+
+            .price {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 13px;
+            }
+
+            a {
+                color: black;
+            }
         }
     }
 }
