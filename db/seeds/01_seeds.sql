@@ -47,3 +47,4 @@ VALUES
 ('Coffee','Enjoy one of our light, medium, dark, decaffeinated, or flavored brews of the day, brewed from only the top 1% of Arabica beans in the world.','https://brewminate.com/wp-content/uploads/2016/06/CoffeeCan01.jpg', 2, 5, 5, true),
 ('Jasmine Pearls Green Tea','Aromatic organic jasmine blossoms are used for scenting the most tender organic green tea leaves and buds then hand-rolled into small pearls. Exquisite in flavor and aroma, and reputed to increase circulation, ease tension and reduce cholesterol.','https://pngimg.com/uploads/tea/tea_PNG16893.png', 2, 5, 3, true),
 ('Bubble Tea','A creamy, sweet, bubbly delight! Full of those chewy, satisfying, delightful little mouthfuls with plenty of cane sugar and either oat milk or coconut milk.','https://guestlist.net/uploads/articles/9/504_medium.jpg', 6, 5, 7, true);
+

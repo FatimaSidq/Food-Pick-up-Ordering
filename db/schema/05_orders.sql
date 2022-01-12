@@ -10,3 +10,4 @@ CREATE TABLE orders (
   when_pickedUp TIMESTAMP,
   special_instructions TEXT
 );
+

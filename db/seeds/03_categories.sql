@@ -6,3 +6,4 @@ VALUES
 ('pastries-desserts', 'Treats you will love to indulge', true),
 ('soups', 'Comfort yourself with hot soups made with fresh, organic ingredients', true),
 ('beverages', 'Hot and cold beverages for everyones delight', true);
+

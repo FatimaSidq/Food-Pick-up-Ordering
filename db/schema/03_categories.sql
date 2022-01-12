@@ -5,3 +5,4 @@ CREATE TABLE categories (
   description TEXT,
   is_active BOOLEAN DEFAULT true
 );
+

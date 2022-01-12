@@ -10,3 +10,4 @@ CREATE TABLE users (
   is_customer BOOLEAN NOT NULL,
   user_since TIMESTAMP NOT NULL DEFAULT Now()
 );
+

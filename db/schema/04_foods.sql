@@ -9,3 +9,4 @@ CREATE TABLE foods (
   preparation_time INTEGER NOT NULL,
   is_active BOOLEAN DEFAULT true
 );
+
