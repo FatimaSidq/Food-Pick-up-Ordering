@@ -39,37 +39,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="assets/menu/blueberry_muffins.png" alt="Buttery French Croissants">
-                    </div>
-                    <div class="info">
-                        <h3>Buttery French Croissants</h3>
-                        <p>Light fluffy French Croissants baked fresh every few hours.</p>
-                        <div class="footer">
-                            <p class="price">$2</p>
-                            <a href="#"><p>Remove</p></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="assets/menu/coffee.png" alt="Buttery French Croissants">
-                    </div>
-                    <div class="info">
-                        <h3>Buttery French Croissants</h3>
-                        <p>Light fluffy French Croissants baked fresh every few hours.</p>
-                        <div class="footer">
-                            <p class="price">$2</p>
-                            <a href="#"><p>Remove</p></a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="sidebar">
-                <h1>Summary</h1>
-                <h2>Order Total: $40</h2>
-                <button class="checkout">Checkout</button>
+                <h1>Order Details</h1>
+                <form class="user-info" action="/order" method="POST">
+                    <label for="first">First Name <span class="required-asterisk">*</span></label>
+                    <input type="text" id="first" name="first" aria-required>
+                    <label for="last">Last Name <span class="required-asterisk">*</span></label>
+                    <input type="text" id="last" name="last" aria-required>
+                    <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+                    <input type="tel" id="phone" name="phone" aria-required>
+                    <div class="bottom">
+                        <h3>Order Total: $40</h3>
+                        <button type="submit" class="checkout">Checkout</button>
+                    </div>
+                </form>
             </div>
         </div>
     </body>
