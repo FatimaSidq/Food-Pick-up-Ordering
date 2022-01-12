@@ -7,6 +7,6 @@ CREATE TABLE users (
   phone VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
   password VARCHAR(100) NOT NULL,
-  is_customer BOOLEAN NOT NULL,    -- optional
+  is_customer BOOLEAN NOT NULL,
   user_since TIMESTAMP NOT NULL DEFAULT Now()
 );

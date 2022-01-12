@@ -1,4 +1,4 @@
--- Users table seeds here
+-- users table seeds here
 INSERT INTO users (name, phone, email, password, is_customer)
 VALUES ('labber', '123-456-7890','l@l.com', 'labber', false),
 ('Fatima', '519-123-4567','f@f.com', '123', true),
