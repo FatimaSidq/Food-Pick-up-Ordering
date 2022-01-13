@@ -1,13 +1,3 @@
--- DROP DATABASE [IF EXISTS] midterm;
-
--- CREATE DATABASE midterm
---     WITH
---     OWNER = labber
---     ENCODING = 'UTF8'
---     CONNECTION LIMIT = -1;
-
--- \c midterm;
-
 DROP TABLE IF EXISTS employees CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS categories CASCADE;
@@ -86,7 +76,6 @@ CREATE TABLE order_details (
   prepared_by INTEGER REFERENCES employees(id) ON DELETE CASCADE
 );
 
--- Drop and recreate Widgets table
 CREATE TABLE widgets (
   id SERIAL PRIMARY KEY NOT NULL,
   employee_id INTEGER REFERENCES employees(id),

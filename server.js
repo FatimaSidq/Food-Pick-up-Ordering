@@ -39,16 +39,13 @@ app.use(express.static("public"));
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const menuRoutes = require("./routes/menu");
+const cartRoutes = require("./routes/cart");
 
 // Mount all resource routes
-// Note: Feel free to replace the example routes below with your own
 app.use("/menu", menuRoutes(db));
-// Note: mount other resources here, using the same pattern above
+app.use("/cart", cartRoutes(db));
 
 // Home page
-// Warning: avoid creating more routes in this file!
-// Separate them into separate routes files (see above).
-
 app.get("/", (req, res) => {
   res.render("index");
 });
