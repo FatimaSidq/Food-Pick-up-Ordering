@@ -1,5 +1,18 @@
 window.onload = () => {
     if (cart) {
+        $(".sidebar").append(`
+<h1>Order Details</h1>
+<form class="user-info" action="/order" method="POST">
+    <label for="first">First Name <span class="required-asterisk">*</span></label>
+    <input type="text" id="first" name="first" aria-required>
+    <label for="last">Last Name <span class="required-asterisk">*</span></label>
+    <input type="text" id="last" name="last" aria-required>
+    <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+    <input type="tel" id="phone" name="phone" aria-required>
+    <div class="bottom">
+        <button type="submit" class="checkout">Checkout</button>
+    </div>
+</form>`)
         let total = 0;
         for (let item of cart) {
             total += item.price;
@@ -41,6 +54,8 @@ window.onload = () => {
             document.cookie = `cart=${cart}`;
         } else {
             document.cookie = 'cart=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            $(".sidebar").html("")
+            $("#items").append('<h3>Your cart is empty.</h3>')
         }
 
         let total = 0;
