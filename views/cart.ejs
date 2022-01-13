@@ -15,30 +15,20 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+        <script type="text/javascript" src="/scripts/getCookie.js"></script>
         <script type="text/javascript" src="/scripts/cart.js"></script>
         <script>
             const id = "<%= id %>";
-        </script>
+            const cart = <%- cart %>;
+          </script>
         <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     </head>
 
     <body>
         <div class="content">
-            <div class="items">
+            <div id="items" class="items">
                 <h1>Cart</h1>
-                <div class="item">
-                    <div class="image">
-                        <img src="assets/menu/buttery_french_croissants.png" alt="Buttery French Croissants">
-                    </div>
-                    <div class="info">
-                        <h3>Buttery French Croissants</h3>
-                        <p>Light fluffy French Croissants baked fresh every few hours.</p>
-                        <div class="footer">
-                            <p class="price">$2</p>
-                            <a href="#"><p>Remove</p></a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <div class="sidebar">
                 <h1>Order Details</h1>

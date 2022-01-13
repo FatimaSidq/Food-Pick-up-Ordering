@@ -71,8 +71,12 @@ body {
                 line-height: 13px;
             }
 
-            a {
+            .remove {
                 color: black;
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
             }
         }
     }
