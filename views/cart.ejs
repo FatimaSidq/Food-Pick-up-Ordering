@@ -1,0 +1,51 @@
+<%- include('partials/_header') %>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Lighthouse Cybercafe - Cart</title>
+
+        <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+        <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+        <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+        <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+        <script type="text/javascript" src="/scripts/getCookie.js"></script>
+        <script type="text/javascript" src="/scripts/cart.js"></script>
+        <script>
+            const id = "<%= id %>";
+            const cart = <%- cart %>;
+          </script>
+        <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    </head>
+
+    <body>
+        <div class="content">
+            <div id="items" class="items">
+                <h1>Cart</h1>
+
+            </div>
+            <div class="sidebar">
+                <h1>Order Details</h1>
+                <form class="user-info" action="/order" method="POST">
+                    <label for="first">First Name <span class="required-asterisk">*</span></label>
+                    <input type="text" id="first" name="first" aria-required>
+                    <label for="last">Last Name <span class="required-asterisk">*</span></label>
+                    <input type="text" id="last" name="last" aria-required>
+                    <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+                    <input type="tel" id="phone" name="phone" aria-required>
+                    <div class="bottom">
+                        <h3>Order Total: $40</h3>
+                        <button type="submit" class="checkout">Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    </html>

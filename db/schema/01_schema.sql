@@ -8,23 +8,14 @@
 
 -- \c midterm;
 
-\ c food;
 
 DROP TABLE IF EXISTS users CASCADE;
-
 DROP TABLE IF EXISTS customers CASCADE;
-
 DROP TABLE IF EXISTS categories CASCADE;
-
 DROP TABLE IF EXISTS foods CASCADE;
-
 DROP TABLE IF EXISTS orders CASCADE;
-
 DROP TABLE IF EXISTS order_details CASCADE;
-
 DROP TABLE IF EXISTS orders CASCADE;
-
-DROP TABLE IF EXISTS widgets CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -35,6 +26,7 @@ CREATE TABLE users (
   is_customer BOOLEAN NOT NULL,
   user_since TIMESTAMP NOT NULL DEFAULT Now()
 );
+
 
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
@@ -56,7 +48,7 @@ CREATE TABLE foods (
   name VARCHAR(255) NOT NULL,
   description TEXT,
   url_image VARCHAR(255) NOT NULL,
-  price INTEGER NOT NULL DEFAULT 0,
+  price INTEGER  NOT NULL DEFAULT 0,
   category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE,
   preparation_time INTEGER NOT NULL,
   is_active BOOLEAN DEFAULT true
@@ -90,6 +82,7 @@ CREATE TABLE order_details (
 );
 
 -- Drop and recreate Widgets table (Example)
+
 CREATE TABLE widgets (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id),

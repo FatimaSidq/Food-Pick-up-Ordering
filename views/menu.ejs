@@ -1,7 +1,8 @@
 <%- include('partials/_header') %>
 
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+
   <head>
     <title>Lighthouse Cybercafe - Menu</title>
 
@@ -12,24 +13,19 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
     <script>
       const id = "<%= id %>";
       const categories = <%- categories %>;
     </script>
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/getCookie.js"></script>
+    <script type="text/javascript" src="/scripts/menu.js"></script>
   </head>
+
   <body>
     <h1>Menu</h1>
     <div id="menu"></div>
-
-    <script type="text/javascript" src="/scripts/menu.js"></script>
   </body>
-</html>
+  </html>
