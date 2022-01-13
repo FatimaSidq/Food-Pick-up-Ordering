@@ -26,7 +26,7 @@ window.onload = () => {
           $("#items").append(`
 <div class="item">
   <div class="image">
-      <img src="${item.url_image}" alt="${item.name}">
+      <img src="${item.image_location}" alt="${item.name}">
   </div>
   <div class="info">
       <h3 class="title">${item.name}</h3>
