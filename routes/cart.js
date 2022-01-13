@@ -26,6 +26,11 @@ module.exports = (db) => {
         }
         const cart = [];
         for (let id of split_cart) {
+            if (isNaN(parseInt(id, 10))) {
+              templateVars["cart"] = JSON.stringify("");
+              res.render("cart", templateVars);
+              return
+            }
             id = JSON.parse(id);
             if (id && typeof id === "number") {
                 await db.query(`SELECT * FROM foods WHERE id = $1`, [id]).then((food) => {
