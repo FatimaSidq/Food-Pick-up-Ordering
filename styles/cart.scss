@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
 }
 
 .content > div {
@@ -17,6 +18,7 @@ body {
 }
 
 .items {
+    min-height: 450px;
     width: 700px;
     margin-bottom: 20px;
 
@@ -83,40 +85,24 @@ body {
 }
 
 .sidebar {
+    min-height: 300px;
+    height: 100%;
     width: 400px;
-    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .checkout {
+    .summary {
+      margin-bottom: 30px;
+    }
+
+    .order-button {
         width: 300px;
         height: 40px;
         border: 2px solid rgb(158, 203, 218);
         background-color: lightblue;
         border-radius: 20px;
         cursor: pointer;
-      }
-}
-
-.user-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-
-.user-info > input {
-    width: 300px;
-    margin: 10px;
-    height: 40px;
-}
-
-.user-info > label {
-    font-size: 15px;
-}
-
-.required-asterisk {
-    color: red;
-}
-
-.bottom {
-    margin-top: 140px;
+        margin-bottom: 20px;
+    }
 }
