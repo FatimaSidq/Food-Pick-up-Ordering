@@ -1,6 +1,6 @@
 -- foods table seeds here
 -- foods table seeds - wraps and burritos
-INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
+INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
   (
     'Veggie Wrap',
@@ -22,7 +22,7 @@ VALUES
   );
 
 -- foods table seeds - salad
-INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
+INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
   (
     'Mixed Veg Salad',
@@ -35,7 +35,7 @@ VALUES
   );
 
 -- foods table seeds - pastries-desserts
-INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
+INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
 ('Buttery French Croissants','Light fluffy French Croissants baked fresh every few hours.','https://lh3.googleusercontent.com/proxy/jHEAqqUv0Vd0M_Elb1emTD4pKcVfH2UTNdV2lFxMtHDBqFFoDRoVAow_v5BKsl-uqQLq0Nmnli0fiyUClqprpN7MtXzOzr35aNMzYClP_O07td1XbtLNuG-vy2U6HmBLcDvz=w1200-h630-p-k-no-nu', 3, 3, 30, true),
 ('Vegan Blueberry-licious Muffins','100% Vegan, created with premium ingredients and void of artificial fillers. Perfect for the health-minded dessert lover, allows you to feel at ease eating them daily with a cup of coffee and friends, or casually munching away on these tasty treats with your family.','https://milkadamia.com/wp-content/uploads/2019/09/shutterstock_747182440.jpg', 2, 3, 30, true),
@@ -43,13 +43,13 @@ VALUES
 ('Decadent Chocolate Chunk Vegan Cookies',' Have chewy, chocolaty, chunky cookies anytime you want','https://www.fodmapeveryday.com/wp-content/uploads/2019/12/vertical-image-of-low-FODMAP-vegan-chocolate-chunks-cookies-one-of-them-sprinkled-with-salt.jpg', 2, 3, 30, true);
 
 -- foods table seeds - soups
-INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
+INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
 ('Creamy Vegan Minestrone Soup','A delicious creamy twist on the classic soup that is full of fresh vegetables, is a hearty meal that is ready in about 30 minutes, perfect for busy weeknights!','https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.PAn1VKdoW3_dYnX1t6to6wHaE8%26pid%3DApi&f=1', 10, 4, 30, true),
 
 
 -- foods table seeds - beverage
-INSERT INTO foods (name, description, url_image, price, category_id, preparation_time, is_active)
+INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
 
 ('Coffee','Enjoy one of our light, medium, dark, decaffeinated, or flavored brews of the day, brewed from only the top 1% of Arabica beans in the world.','https://brewminate.com/wp-content/uploads/2016/06/CoffeeCan01.jpg', 2, 5, 5, true),
