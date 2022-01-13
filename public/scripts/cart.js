@@ -1,6 +1,8 @@
 window.onload = () => {
     if (cart) {
+        let total = 0;
         for (let item of cart) {
+            total += item.price;
             $("#items").append(`
 <div class="item">
     <div class="image">
@@ -19,6 +21,7 @@ window.onload = () => {
 </div>
             `)
         }
+        $(".bottom").prepend(`<h3 id="total">Order Total: $${total}</h3>`)
     } else {
         $("#items").append('<h3>Your cart is empty.</h3>')
     }
@@ -39,5 +42,11 @@ window.onload = () => {
         } else {
             document.cookie = 'cart=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         }
+
+        let total = 0;
+        for (let price of $(".price")) {
+            total += parseInt(price.textContent.replace("$", ""), 10);
+        }
+        $("#total").html(`<h3 id="total">Order Total: $${total}</h3>`)
     })
 }
