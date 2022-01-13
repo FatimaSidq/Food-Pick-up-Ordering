@@ -47,6 +47,6 @@ window.onload = () => {
         for (let price of $(".price")) {
             total += parseInt(price.textContent.replace("$", ""), 10);
         }
-        $("#total").html(`<h3 id="total">Order Total: $${total}</h3>`)
+        $("#total").html(`Order Total: $${total}`)
     })
 }
