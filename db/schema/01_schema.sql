@@ -14,6 +14,7 @@ CREATE TABLE employees (
   phone VARCHAR(15) NOT NULL,
   email VARCHAR(100) NOT NULL,
   password VARCHAR(100) NOT NULL,
+  is_admin BOOLEAN NOT NULL DEFAULT false,
   employee_since TIMESTAMP NOT NULL DEFAULT Now()
 );
 
@@ -38,12 +39,12 @@ CREATE TABLE categories (
 
 CREATE TABLE foods (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL,
+  name VARCHAR(50) NOT NULL,
   description TEXT,
   image_location VARCHAR(255) NOT NULL,
   price INTEGER NOT NULL DEFAULT 0,
   category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE,
-  preparation_time INTEGER NOT NULL,
+  preparation_time INTEGER NOT NULL DEFAULT 10,
   is_active BOOLEAN DEFAULT true
 );
 
