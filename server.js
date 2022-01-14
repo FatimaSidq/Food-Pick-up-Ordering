@@ -5,7 +5,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const sassMiddleware = require("./lib/sass-middleware");
 const express = require("express");
-const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser')
 const app = express();
 const morgan = require("morgan");
 
@@ -14,6 +14,10 @@ const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
 const db = new Pool(dbParams);
 db.connect();
+
+db.query("SELECT * FROM categories;").then((data) => {
+  console.log(data.rows)
+})
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -40,10 +44,12 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const menuRoutes = require("./routes/menu");
 const cartRoutes = require("./routes/cart");
+const orderRoutes = require("./routes/order");
 
 // Mount all resource routes
 app.use("/menu", menuRoutes(db));
 app.use("/cart", cartRoutes(db));
+app.use("/order", orderRoutes(db));
 
 // Home page
 app.get("/", (req, res) => {

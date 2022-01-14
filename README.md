@@ -1,15 +1,57 @@
-LHL Node Skeleton
-=========
+# Lighthouse Cyber Cafe - Food PickUp Ordering App
 
-## Project Setup
+A food ordering experience for a single restaurant. Hungry clients of this fictitious restaurant can visit its website, select one or more dishes and place an order for pick-up. They will receive a confirmation message when their order is placed and when it is ready for a pick-up.
 
-The following steps are only for _one_ of the group members to perform.
+The restaurant and client both are both notified since this app serves as an intermediary.
+Every time an order is placed the restaurant receives a notification via SMS.
 
-1. Create your own copy of this repo using the `Use This Template` button, ideally using the name of your project. The repo should be marked Public
-2. Verify that the skeleton code now shows up in your repo on GitHub, you should be automatically redirected
-3. Clone your copy of the repo to your dev machine
-4. Add your team members as collaborators to the project so that they can push to this repo
-5. Let your team members know the repo URL so that they use the same repo (they should _not_ create a copy/fork of this repo since that will add additional workflow complexity to the project)
+A modern telecomm API service Twilio is used to implement SMS communication from the website to the client and restaurant.
+
+# Final Product
+
+## Menu
+![Categories : 1-2 wraps-sandwiches, salads]()
+![Categories : 3-4 pastries-desserts, soups]()
+![Categories : 5-6 appetizers, beverages]()
+
+## Cart and Summary
+
+
+## Order Confirmation 
+![Web Order Confirmation as soon as the user submit the order with payment]()
+
+
+## Database Design
+
+![ERD](ERD-LighthouseCyberCafe.png)
+
+
+## Project Stack
+
+- **Front-End: HTML, SASS, JavaScript, jQuery**
+- **Back-End: Nodejs, Express, PSQL**
+
+
+## Project Features
+
+#### For Users
+- Users can choose to see the list of available menu items from the homepage.
+- Users can select menu items listed by category.
+- Users can see the details, description and price of an individual item.
+- Users can add and remove items to the cart.
+- Users can see the content of their cart and the order running total.
+- Users can remove an item from the cart.
+- Users can submit their order when they are ready to pay.
+- Users receive a personalized SMS order confirmation and order details once order is submitted with a time estimate for the order to be available for pick-up
+#### For Restaurant Administrator
+- Restaurant administrator receives an SMS with the order id, customer's name, and order details when a new order is placed.
+
+
+## Collaboration
+
+- [Fatima](https://github.com/FatimaSidq)
+- [Osman](https://github.com/OsmanShakib)
+- [Stella](https://github.com/goodWishesEveryone)
 
 
 ## Getting Started
@@ -23,9 +65,27 @@ The following steps are only for _one_ of the group members to perform.
 4. Fix to binaries for sass: `npm rebuild node-sass`
 5. Reset database: `npm run db:reset`
   - Check the db folder to see what gets created and seeded in the SDB
-7. Run the server: `npm run local`
+7. Run the server: `npm run start`
   - Note: nodemon is used, so you should not have to restart your server
 8. Visit `http://localhost:8080/`
+  - please visit `http://localhost:8080/login/2`  --> as admin
+  - please visit `http://localhost:8080/login/4` --> as a user
+
+
+## Dependencies
+
+- Node 10.x or above
+- NPM 5.x or above
+- pg
+- body-parser
+- cookie-parser
+- chalk
+- dotenv
+- ejs
+- express
+- morgan
+- twilio
+
 
 ## Warnings & Tips
 
@@ -35,9 +95,3 @@ The following steps are only for _one_ of the group members to perform.
 - Use the `npm run db:reset` command each time there is a change to the database schema or seeds. 
   - It runs through each of the files, in order, and executes them against the database. 
   - Note: you will lose all newly created (test) data each time this is run, since the schema files will tend to `DROP` the tables and recreate them.
-
-## Dependencies
-
-- Node 10.x or above
-- NPM 5.x or above
-- PG 6.x
