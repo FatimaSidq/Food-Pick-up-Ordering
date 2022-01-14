@@ -7,30 +7,17 @@ Every time an order is placed the restaurant receives a notification via SMS.
 
 A modern telecomm API service Twilio is used to implement SMS communication from the website to the client and restaurant.
 
-# Final Product
 
-## Menu
-![Categories : 1-2 wraps-sandwiches, salads]()
-![Categories : 3-4 pastries-desserts, soups]()
-![Categories : 5-6 appetizers, beverages]()
+## Collaboration
 
-## Cart and Summary
-![Cart]()
-
-
-## Order Confirmation 
-![Web Order Confirmation as soon as the user submit the order with payment]()
+- [Fatima](https://github.com/FatimaSidq)
+- [Osman](https://github.com/OsmanShakib)
+- [Stella](https://github.com/goodWishesEveryone)
 
 
 ## Database Design
 
-![ERD](ERD-LighthouseCyberCafe.png)
-
-
-## Project Stack
-
-- **Front-End: HTML, SASS, JavaScript, jQuery**
-- **Back-End: Nodejs, Express, PSQL**
+![ERD](public/assets/ERD-LighthouseCyberCafe.png)
 
 
 ## Project Features
@@ -48,11 +35,27 @@ A modern telecomm API service Twilio is used to implement SMS communication from
 - Restaurant administrator receives an SMS with the order id, customer's name, and order details when a new order is placed.
 
 
-## Collaboration
+# Final Product
 
-- [Fatima](https://github.com/FatimaSidq)
-- [Osman](https://github.com/OsmanShakib)
-- [Stella](https://github.com/goodWishesEveryone)
+## Menu
+![Categories : 1-2 wraps-sandwiches, salads](public/assets/menu/menuCategory-1-2.png)
+![Categories : 3-4 pastries-desserts, soups](public/assets/menu/menuCategory-3-4.png)
+![Categories : 5-6 appetizers, beverages](public/assets/menu/menuCategory-5-6.png)
+
+## Cart and Summary
+![Cart]()
+
+## Order Confirmation 
+![Web Order Confirmation as soon as the user submit the order with payment](public/assets/orderConfirmation-customer.png)
+
+## SMS 
+![Screenshot of SMS - Lighthouse Cyber Cafe Admin received once an order is placed and paid](public/twilioSMS-RestaurantAdmin)
+
+
+## Project Stack
+
+- **Front-End: HTML, SASS, JavaScript, jQuery**
+- **Back-End: Nodejs, Express, PSQL**
 
 
 ## Getting Started
