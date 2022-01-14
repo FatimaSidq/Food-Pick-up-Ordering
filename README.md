@@ -15,6 +15,12 @@ A modern telecomm API service Twilio is used to implement SMS communication from
 - [Stella](https://github.com/goodWishesEveryone)
 
 
+## Project Stack
+
+- **Front-End: HTML, SASS, JavaScript, jQuery**
+- **Back-End: Nodejs, Express, PSQL**
+
+
 ## Database Design
 
 ![ERD](public/assets/ERD-LighthouseCyberCafe.png)
@@ -46,12 +52,6 @@ A modern telecomm API service Twilio is used to implement SMS communication from
 ![Screenshot of the Web Order Confirmation as soon as the user submit the order with payment](public/assets/orderConfirmation-customer.png)
 ## SMS 
 ![Screenshot of SMS - Lighthouse Cyber Cafe Admin received once an order is placed and paid](public/twilioSMS-RestaurantAdmin)
-
-
-## Project Stack
-
-- **Front-End: HTML, SASS, JavaScript, jQuery**
-- **Back-End: Nodejs, Express, PSQL**
 
 
 ## Getting Started
