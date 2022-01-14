@@ -15,6 +15,7 @@ A modern telecomm API service Twilio is used to implement SMS communication from
 ![Categories : 5-6 appetizers, beverages]()
 
 ## Cart and Summary
+![Cart]()
 
 
 ## Order Confirmation 
