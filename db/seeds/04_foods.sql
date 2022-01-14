@@ -1,11 +1,41 @@
+-- employees table seeds
+INSERT INTO employees (firstName, lastName, address, phone, email, password, is_admin)
+VALUES ('labber', 'labber','Lighthouse Labs','123-456-7890','l@l.com', 'labber', true),
+('Fatima', 'Siddique','Lighthouse Labs','519-123-4567','f@f.com', '123', false),
+('Osman', 'Shakib', 'Lighthouse Labs','213-123-7890','o@o.com','123', false),
+('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', false),
+('Test', 'Employee', 'Address1','111-222-3333','t@t.com','123', false);
+
+-- users table seeds
+INSERT INTO users (firstName, lastName, address, phone, email, password, is_employee)
+VALUES
+('labber', 'labber','Lighthouse Labs','123-456-7890','l@l.com', 'labber', true),
+('Fatima', 'Siddique','Lighthouse Labs','548-490-0739','f@f.com', '123', true),
+('Osman', 'Shakib', 'Lighthouse Labs','213-123-7890','o@o.com','123', true),
+('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', true),
+('Test1', 'User1', '','111-222-3333','t@t.com','123', false),
+('Test2', 'User2, '','111-222-3333','t@t.com','123', false);
+
+-- categories table seeds
+INSERT INTO categories (name, description, is_active)
+VALUES
+('wraps-sandwiches', 'Hot and cold sandwiches and wraps', true),
+('salads', 'For healthier option', true),
+('pastries-desserts', 'Treats you will love to indulge', true),
+('soups', 'Comfort yourself with hot soups made with fresh, organic ingredients', true),
+('appetizers', 'Guarantees to stimulate your appetite', true),
+('beverages', 'Hot and cold beverages for everyones delight', true);
+
+
 
 -- foods table seeds
+
 -- foods table seeds - wraps and burritos
 INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
   (
     'Veggie Wrap',
-    'A colourful Veggie Wrap packed with fresh organic veggies of your choice wrapped in lettuce.',
+    'A colourful veggie wrap packed with fresh organic veggies of your choice wrapped in lettuce.',
     'assets/menu/wraps-rawVeggies.png',
     8,
     1,
@@ -14,7 +44,7 @@ VALUES
   ),
   (
     'Vegan Breakfast Burritos',
-    'Kidney beans, Sweet potatoes, avocados and beets wrapped in a tortilla',
+    'Kidney beans, sweet potatoes, avocados and beets wrapped in a tortilla.',
     'assets/menu/burritos-veggie_breakfast.png',
     6,
     1,
@@ -26,7 +56,7 @@ VALUES
 INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
   ( 'Raw Mixed Veggie Platter',
-    'Corn, Cherry tomatoes, Chickpeas, Radishes, Coconut Bacon on a bed of Romaine lettuce topped with avocados',
+    'Corn, cherry tomatoes, chickpeas, radishes, coconut bacon on a bed of romaine lettuce topped with avocados.',
     'assets/menu/salad-raw_mixed_veg.png',
     8,
     2,
@@ -49,12 +79,13 @@ VALUES
 ('Buttery French Croissants','Light fluffy French Croissants baked fresh every few hours served with strawberries and blueberries.','assets/menu/croissants_buttery_french_blueberry-strawberry.jpeg', 3, 3, 30, true),
 ('Vegan Blueberry-licious Muffins','100% Vegan, created with premium ingredients and void of artificial fillers. Perfect for the health-minded dessert lover, allows you to feel at ease eating them daily with a cup of coffee and friends, or casually munching away on these tasty treats with your family.','assets/menu/muffins-veganBlueberry-licious.jpeg', 2, 3, 30, true),
 ('Carrot Heart Muffins','Toddlers love these little muffins. These are definitely savoury muffins, but because cooked carrot is quite sweet tasting, and the added ingredient of orange juice is sweet, they are sweeter than you would imagine.','assets/menu/muffins-toddlerHearts_Carrot.jpeg', 1, 3, 30, true),
-('Decadent Chocolate Chunk Vegan Cookies',' Have chewy, chocolaty, chunky cookies anytime you want','assets/menu/cookies-chewy_chocolate_chunk.png', 2, 3, 30, true);
+('Decadent Chocolate Chunk Vegan Cookies',' Have chewy, chocolaty, chunky cookies anytime you want.','assets/menu/cookies-chewy_chocolate_chunk.png', 2, 3, 30, true);
 
 -- foods table seeds - soups
 INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
 VALUES
-('Creamy Vegan Minestrone Soup','A delicious creamy twist on the classic soup that is full of fresh vegetables, is a hearty meal that is ready in about 30 minutes, perfect for busy weeknights!','assets/menu/soup-creamyVeganMinestrone.jpeg', 8, 4, 25, true);
+('Creamy Vegan Minestrone Soup','A delicious creamy twist on the classic soup that is full of fresh vegetables, is a hearty meal that is ready in about 30 minutes, perfect for busy weeknights!','assets/menu/soup-creamyVeganMinestrone.jpeg', 8, 4, 25, true),
+('Lightly Spiced Chickpea & Vegetable Soup','You will love this lightly spiced Chickpea vegetable soup! It’s super comforting and packed with nutritious vegetables and delicious flavor!','assets/menu/soup-spiced-chickpea-vegetable.jpeg', 6, 4, 25, true);
 
 -- foods table seeds - appetizers
 INSERT INTO foods (name, description, image_location, price, category_id, preparation_time, is_active)
