@@ -28,7 +28,6 @@ A modern telecomm API service Twilio is used to implement SMS communication from
 - Users can see the details, description and price of an individual item.
 - Users can add and remove items to the cart.
 - Users can see the content of their cart and the order running total.
-- Users can remove an item from the cart.
 - Users can submit their order when they are ready to pay.
 - Users receive a personalized SMS order confirmation and order details once order is submitted with a time estimate for the order to be available for pick-up
 #### For Restaurant Administrator
@@ -38,16 +37,13 @@ A modern telecomm API service Twilio is used to implement SMS communication from
 # Final Product
 
 ## Menu
-![Categories : 1-2 wraps-sandwiches, salads](public/assets/menu/menuCategory-1-2.png)
-![Categories : 3-4 pastries-desserts, soups](public/assets/menu/menuCategory-3-4.png)
-![Categories : 5-6 appetizers, beverages](public/assets/menu/menuCategory-5-6.png)
-
+![Screenshot of Categories : 1-2 wraps-sandwiches, salads](public/assets/menu/menuCategory-1-2.png)
+![Screenshot of Categories : 3-4 pastries-desserts, soups](public/assets/menu/menuCategory-3-4.png)
+![Screenshot of Categories : 5-6 appetizers, beverages](public/assets/menu/menuCategory-5-6.png)
 ## Cart and Summary
-![Cart]()
-
+![Screenshot of Cart](public/assets/cart.png)
 ## Order Confirmation 
-![Web Order Confirmation as soon as the user submit the order with payment](public/assets/orderConfirmation-customer.png)
-
+![Screenshot of the Web Order Confirmation as soon as the user submit the order with payment](public/assets/orderConfirmation-customer.png)
 ## SMS 
 ![Screenshot of SMS - Lighthouse Cyber Cafe Admin received once an order is placed and paid](public/twilioSMS-RestaurantAdmin)
 
