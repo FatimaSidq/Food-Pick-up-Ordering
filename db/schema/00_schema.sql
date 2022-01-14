@@ -76,9 +76,3 @@ CREATE TABLE order_details (
   total_amount FLOAT NOT NULL, -- no_of_serving * foods.price of the foods table per foods.id
   prepared_by INTEGER REFERENCES employees(id) ON DELETE CASCADE
 );
-
-CREATE TABLE widgets (
-  id SERIAL PRIMARY KEY NOT NULL,
-  employee_id INTEGER REFERENCES employees(id),
-  name VARCHAR(255) NOT NULL
-);
