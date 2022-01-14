@@ -82,12 +82,13 @@ ${result}
 
 Total: $${amount}`
             console.log(message)
-
+            console.log(phone)
+            console.log(phone.replace("-", "").replace("-", ""))
             client.messages
               .create({
                 body: message + "\n\nThank you for your order. Enjoy your meal",
                 from: '+15484900739',
-                to: `+1${phone.replaceAll("-", "")}`
+                to: `+1${phone.replace("-", "").replace("-", "")}`
               });
 
             client.messages
