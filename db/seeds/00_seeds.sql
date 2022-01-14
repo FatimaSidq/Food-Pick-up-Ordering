@@ -2,8 +2,8 @@
 INSERT INTO employees (firstName, lastName, address, phone, email, password, is_admin)
 VALUES ('labber', 'labber','Lighthouse Labs','123-456-7890','l@l.com', 'labber', true),
 ('Fatima', 'Siddique','Lighthouse Labs','548-490-0739','f@f.com', '123', true),
-('Osman', 'Shakib', 'Lighthouse Labs','213-123-7890','o@o.com','123', false),
-('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', false),
+('Osman', 'Shakib', 'Lighthouse Labs','6474705042','o@o.com','123', false),
+('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', true),
 ('Test', 'Employee', 'Address1','111-222-3333','t@t.com','123', false);
 
 
@@ -12,7 +12,7 @@ INSERT INTO users (firstName, lastName, address, phone, email, password, is_empl
 VALUES
 ('labber', 'labber','Lighthouse Labs','123-456-7890','l@l.com', 'labber', true),
 ('Fatima', 'Siddique','Lighthouse Labs','548-490-0739','f@f.com', '123', true),
-('Osman', 'Shakib', 'Lighthouse Labs','213-123-7890','o@o.com','123', true),
+('Osman', 'Shakib', 'Lighthouse Labs','6474705042','o@o.com','123', true),
 ('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', true),
 ('Test1', 'User1', '','111-222-3333','t@t.com','123', false),
 ('Test2', 'User2', '','111-222-3333','tt@tt.com','123', false);
