@@ -40,10 +40,12 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const menuRoutes = require("./routes/menu");
 const cartRoutes = require("./routes/cart");
+const orderRoutes = require("./routes/order");
 
 // Mount all resource routes
 app.use("/menu", menuRoutes(db));
 app.use("/cart", cartRoutes(db));
+app.use("/order", orderRoutes(db));
 
 // Home page
 app.get("/", (req, res) => {

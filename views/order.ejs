@@ -15,15 +15,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
-    <script>
-      const id = "<%= id %>";
-    </script>
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/getCookie.js"></script>
-    <script type="text/javascript" src="/scripts/order.js"></script>
+    <script>
+      if (JSON.parse("<%= redirectAttribute %>")) {
+        document.body.innerHTML = `<h1>${"<%= error %>"}</h1>`;
+        new Promise(resolve => setTimeout(resolve, 1000)).then(function() {
+          window.location.href = "/menu"
+        })
+      } else {
+        var user_name = "<%= user_name %>"; // var fixes scoping issue?
+        var estimated_time = "<%= estimated_time %>"; // order.js: user_name not defined on const or let
+        var amount = "<%= amount %>";
+        var phone = "<%= phone %>";
+      }
+    </script>
+    <script type="text/javascript" src="/scripts/order.js"></script> 
   </head>
 
   <body>
-    <h1>Thanks for your order!</h1>
   </body>
   </html>
