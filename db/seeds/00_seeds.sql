@@ -6,6 +6,7 @@ VALUES ('labber', 'labber','Lighthouse Labs','123-456-7890','l@l.com', 'labber',
 ('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', false),
 ('Test', 'Employee', 'Address1','111-222-3333','t@t.com','123', false);
 
+
 -- users table seeds
 INSERT INTO users (firstName, lastName, address, phone, email, password, is_employee)
 VALUES
@@ -15,6 +16,7 @@ VALUES
 ('Stellaris', 'Cano', 'Lighthouse Labs','647-704-8000','s@m.com','123', true),
 ('Test1', 'User1', '','111-222-3333','t@t.com','123', false),
 ('Test2', 'User2', '','111-222-3333','tt@tt.com','123', false);
+
 
 -- categories table seeds
 INSERT INTO categories (name, description, is_active)
